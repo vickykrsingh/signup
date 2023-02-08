@@ -1,0 +1,178 @@
+:root{
+    --myclr: white;
+    --mybg: #F89880;
+    /* --mybg: red; */
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus{
+    -webkit-text-fill-color: var(--myclr);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px 0px;
+    background: hsla(311, 72%, 67%, 1);
+    background: linear-gradient(180deg, hsla(311, 72%, 67%, 1) 0%, hsla(11, 78%, 60%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(311, 72%, 67%, 1) 0%, hsla(11, 78%, 60%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(311, 72%, 67%, 1) 0%, hsla(11, 78%, 60%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E86FD2", endColorstr="#E86548", GradientType=1 );
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+}
+fieldset{
+    min-width: 450px;
+    max-width: 750px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+    /* border: 2px solid var(--myclr); */
+    background: rgba(255 , 255, 255, 0.2 );
+    box-shadow: 0px 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+legend{
+    color: var(--myclr);
+    font-size: 20px;
+}
+.fname , .lname , .pno , .email , .password {
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    z-index: 3;
+    border-bottom: 1px solid var(--myclr);
+    color: var(--myclr);
+    font-size: 16px;
+}
+/* .fname:focus , .lname:focus , .pno:focus , .email:focus , .password:focus{
+    background-color: transparent;
+} */
+.f-name,.l-name,.phone-no,.e-mail,.pass{
+    background-color: transparent;
+    position: relative;
+}
+.f-name span,.l-name span,.phone-no span,.e-mail span,.pass span{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    transition: 0.5s ease all;
+    z-index: -1;
+    opacity: 0.6;
+    color: var(--myclr);
+}
+.fname:focus~span,.lname:focus~span,.pno:focus~span,.email:focus~span,.password:focus~span,.fname:valid~span,.lname:valid~span,.pno:valid~span,.email:valid~span,.password:valid~span{
+    transform: translateY(-20px);
+    opacity: 1;
+}
+.DOB{
+    width: 200px;
+    height: 50px;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--myclr);
+    background-color: transparent;
+
+}
+.date{
+    width: 100%;
+    height: 45px;
+    padding: 15px 5px;
+    /* background-color: rgba(130, 14, 237,0.8); */
+    color: var(--myclr);
+    border: 1px solid var(--myclr);
+    font-weight: 600;
+    font-size: 16px;
+    background-color: transparent;
+}
+#country{
+    width: 200px;
+    height: 35px;
+    color: var(--myclr);
+    border: 1px solid var(--myclr);
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+#country option{
+    background-color: var(--mybg);
+}
+.hobbies label{
+    color: var(--myclr);
+    font-size: 18px;
+    margin-right: 20px;
+}
+.movies label{
+    margin-right: 50px;
+}
+.movie{
+    margin-left: 42px;
+}
+.hobbies input{
+    width: 16px;
+    height: 16px;
+}
+.gender label:nth-child(1){
+    color: var(--myclr);
+    font-size: 17px;
+    font-weight: 600;
+}
+.male,.female{
+    color: var(--myclr);
+    font-size: 17px;
+}
+.gender input{
+    width: 16px;
+    height: 16px;
+}
+.submit{
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    color: hsla(11, 78%, 60%, 1);
+    border: 1px solid hsla(11, 78%, 60%, 1);
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: 0.5s ease all;
+    font-weight: 600;
+}
+.submit:hover{
+    background-color: hsla(11, 78%, 60%, 1);
+    color: #fff;
+}
